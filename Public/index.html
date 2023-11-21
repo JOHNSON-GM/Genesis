@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <link rel="stylesheet" href="/styles/signupPage.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="header2">
+            <p id="page_title" class="page_title"> SIGN UP</p>
+            <p class="underline"> </p>
+        </div>
+        <form id="form_content" action="/submit" class="content" method="post">
+            <input id="name_input" name="name" placeholder="Enter your name" type="text" autocomplete="name" >
+            <input id="email_input" name="email" placeholder="Enter your email" type="email" autocomplete="email" >
+            <input id="password_input" name="password" placeholder="Enter your password" type="password" autocomplete="off" >
+            <button id="submit_Btn" type="submit" class="submit_btn">Submit</button>
+            <div class="has_account">
+                <p class="log_in_account">Have an account? </p> 
+                <button type="button" id="login_btn"> Log in</button>
+            </div>
+            <button type="button" id="admin-btn"> ADMIN</button>
+        </form>
+    </div>
+    <script>
+        let admin_Btn = document.querySelector('#admin-btn');
+         let name_input = document.querySelector("#name_input");
+        let login_btn = document.querySelector("#login_btn");
+        let page_title = document.querySelector("#page_title");
+        let form_content = document.querySelector("#form_content");
+        let submit = document.querySelector("#submit_Btn");
+        let email_input = document.querySelector("#email_input");
+        let password_Input = document.querySelector("#password_input");
+
+        
+        login_btn.addEventListener("click", function (){
+            window,location.href = "loginPage.html";
+        })
+
+        admin_Btn.addEventListener("click", function (){
+            window.location.href = "adminLogin.html";
+        })
+        
+        form_content.addEventListener("submit", function (event) {
+            if (name_input.value.trim() === "") {
+                    alert("Your name is required");
+                    event.preventDefault(); 
+                }
+            if (email_input.value.trim() === "") {
+                alert("Email is required");
+                event.preventDefault(); 
+            }
+            if (password_Input.value.trim() === "") {
+                alert("Password is required");
+                event.preventDefault();
+            }
+        const existingUser = jsonData.find((user) => user.email == userData.email);
+
+        if(existingUser)
+            alert("User already exists");
+            
+        });
+    </script>
+</body>
+</html>

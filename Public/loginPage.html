@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in page</title>
+    <link rel="stylesheet" href="/styles/loginPage.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="header2">
+            <p id="page_title" class="page_title"> LOG IN</p>
+            <p class="underline"> </p>
+        </div>
+        <form id="form_content" action="/login" class="content" method="post">
+            <input id="email_input" name="email" placeholder="Enter your email" type="email" autocomplete="email" >
+            <input id="password_input" name="password" placeholder="Enter your password" type="password" autocomplete="off" >
+            <button id="login_btn" type="submit">Log in</button>
+        </form>
+    </div>
+    <script>
+        let login_Btn = document.querySelector('#login_Btn');
+        let admin_Btn = document.querySelector('#admin-btn');
+        let password = document.querySelector('#password_input');
+        let email = document.querySelector('#email_input');
+
+        
+
+        form_content.addEventListener("login", function (event) {
+            if (email.value.trim() === "") {
+                alert("Email is required");
+                event.preventDefault(); 
+            }
+            if (password.value.trim() === "") {
+                alert("Password is required");
+                event.preventDefault();
+            }
+            
+        });
+
+        
+    </script>
+</body>
+</html>

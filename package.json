@@ -1,0 +1,19 @@
+{
+  "name": "genesis",
+  "version": "1.0.0",
+  "description": "POS System",
+  "main": "index.mjs",
+  "scripts": {
+    "start": " node index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Genesis"
+  },
+  "author": "JOHNSON-GM",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "open": "^9.1.0"
+  }
+}

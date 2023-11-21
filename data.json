@@ -1,0 +1,26 @@
+{
+  "people": [
+    {
+      "name": "Johnson Macharia Gichuki",
+      "email": "gichukijohnson93@gmail.com",
+      "password": "ww"
+    },
+    {
+      "name": "Johnson Gichuki",
+      "email": "gichukijohnson9@gmail.com",
+      "password": "team"
+    },
+    {
+      "email": "gichuki@gmail.com",
+      "password": "admin"
+    }
+  ],
+  "Admin": [
+    {
+      "name": "Johnson ",
+      "email": "gichuki@gmail.com",
+      "password": "admin"
+    }
+  ],
+  "Products": []
+}
