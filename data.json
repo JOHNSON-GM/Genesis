@@ -11,8 +11,19 @@
       "password": "team"
     },
     {
-      "email": "gichuki@gmail.com",
-      "password": "admin"
+      "name": "kate",
+      "email": "kate@gmail.com",
+      "password": "wewe"
+    },
+    {
+      "name": "Lucy Githu",
+      "email": "githu@gmail.com",
+      "password": "paper"
+    },
+    {
+      "name": "Noah Gitau",
+      "email": "Noah@gmail.com",
+      "password": "noahgitau"
     }
   ],
   "Admin": [
@@ -22,5 +33,30 @@
       "password": "admin"
     }
   ],
-  "Products": []
+  "Products": [
+    {
+      "ID": "23",
+      "Name": "table",
+      "Price": "2000",
+      "Quantity": "23"
+    }
+  ],
+  "Sales": [
+    {
+      "Customer": "Johnson Gichuki",
+      "productID": "1",
+      "Name": "hammer",
+      "Price": "2000",
+      "Quantity": "2",
+      "Date_of_sale": "2023-11-23"
+    },
+    {
+      "Customer": "Noah ",
+      "productID": "12",
+      "Name": "pliers",
+      "Price": "2000",
+      "Quantity": "1",
+      "Date_of_sale": "2023-11-23"
+    }
+  ]
 }

@@ -4,14 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/Public/styles/home.css">
+    <link rel="stylesheet" href="/styles/home.css">
 </head>
 <body>
-    <div class="items_div" >
-
+    <div class="pageTitle" >
+        <h2>Home Page</h2>
     </div>
+        <div class="items_div">
+            <div class="itemsContainer" >
+                <div class="Items">
+                    <p id="page_title" class="page_title"> Sale </p>
+                    <p class="underline"> </p>
+                </div>
+                <form id="form_content" action="/post_sale" class="content" method="post">
+                    <input id="name_input" name="customerName" placeholder="Enter customer's name" type="text" autocomplete="name" > <br>
+                    <input id="product_id" name="productId" placeholder="Enter product ID" type="number"><br>
+                    <input id="product_name" name="name" placeholder="Enter product name" type="text"><br>
+                    <input id="product_price" name="price" placeholder="Enter price of the item" type="number"><br>
+                    <input id="product_quantity" name="quantity" placeholder="Enter quantity" type="number"><br>
+                    <input id="dateOfSale" name="date" placeholder="Enter quantity" type="date"><br>
+                    <button id="submit_Btn" type="submit" class="submit_btn">Add Sale</button>
+                </form>
+            </div>
+            <button id="logout_btn" type="button" >Log Out</button>
+            
+        </div>
     <div class="checkout_div" >
+        <div class="subCheckout" >
+            <h2 class="Receipt"> GENESIS LTD.</h2>
+            <table id="receiptTable">
+                <thead class="table_head" >
+                  <tr class="tableNames" >
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+              </table>
+              
+    
+    
+        </div>
+        <div class="grand_div" >
+            <!-- <p class="Total_price"> TOTAL:</p> -->
+            <button id="Paid_btn" type="button"> Paid </button>
+        </div>
+       
+        </div>
+        
 
-    </div>
+    <script>
+        let nameInput = document.querySelector('#name_input');
+        let productId = document.querySelector('#product_id');
+        let productName = document.querySelector('#product_name');
+        let productPrice = document.querySelector('#product_price');
+        let productQuantity = document.querySelector('#product_quantity');
+        let submitButton = document.querySelector("#submit_Btn");
+        let sale_date = document.querySelector('#dateOfSale');
+        let paidBtn = document.querySelector('#Paid_btn');
+        let logoutBtn = document.querySelector('#logout_btn');
+
+        function addSaleToReceipt() {
+            const receiptTableBody = document.querySelector('#receiptTable tbody');
+            const row = receiptTableBody.insertRow();
+
+            const nameCell = row.insertCell(0);
+            const quantityCell = row.insertCell(1);
+            const priceCell = row.insertCell(2);
+
+            nameCell.textContent = productName.value;
+            quantityCell.textContent = productQuantity.value;
+            priceCell.textContent = productPrice.value;
+        }
+
+        form_content.addEventListener("submit", function (event) {
+            if (nameInput.value.trim() === "" || productId.value.trim() === "" || productName.value.trim() === "" || productPrice.value.trim() === "" || productQuantity.value.trim() === "") {
+                alert("All fields are required");
+                event.preventDefault();
+                return;
+            }
+            
+            
+        fetch('/post_sale', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+        body: JSON.stringify({
+            customerName: nameInput.value,
+            productId: productId.value,
+            name: productName.value,
+            price: productPrice.value,
+            quantity: productQuantity.value,
+            date: sale_date.value,
+        }),
+        })
+        .then(response => {
+            console.log('Response status:', response.status);
+            addSaleToReceipt();
+            return response.text();
+        })
+        .then(data => {
+            alert(data); // Display the server response
+        
+
+        // Clear the form values
+        nameInput.value = '';
+        productId.value = '';
+        productName.value = '';
+        productPrice.value = '';
+        productQuantity.value = '';
+        sale_date.value = '';
+    })
+    .then(response => response.json())  // Assuming your server sends back the sale details
+            .then(sale => {
+                alert('Sale added successfully');
+                addSaleToReceipt(sale); // Call the function to update the receipt table
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+
+            event.preventDefault();
+        });
+
+
+        paidBtn.addEventListener("click", function (){
+            window.location.href = "home.html";
+        })
+
+        logoutBtn.addEventListener("click", function (){
+            window.location.href = "index.html";
+        })
+   
+
+
+
+
+    </script>
 </body>
 </html>

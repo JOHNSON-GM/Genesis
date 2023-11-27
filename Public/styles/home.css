@@ -1,18 +1,141 @@
 body{
     margin: 0;
+    background-image: linear-gradient(rgba(196, 196, 196, 0.8),rgba(196, 196, 196, 0.8)), url(../images/ecommerce-2140604_1920.jpg);
+
+}
+p{
+    display: inline-block;
+}
+
+.pageTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .items_div{
+    position: relative;
     display: inline-block;
-    background-color: aqua;
+    width: 50%;
     height: 100vh;
-    width: 60%;
+    vertical-align: top; 
 }
 
-.checkout_div{
-    display: inline-block;
-    height: 100vh;
-    width: 39%;
-    background-color: red;
+#logout_btn{
+    position: relative;
+    top: 80px;
+    left: 60px;
+    background-color: rgb(235, 235, 235);
+    border: 1px;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
+
+.itemsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 450px;
+    top: 40px;
+    left: 40px;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: rgb(76, 114, 114);
+}
+
+#name_input,
+#product_id,
+#product_name,
+#product_price,
+#product_quantity,
+#dateOfSale{
+    background-color: rgb(235, 235, 235);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px;
+    border-radius: 10px;
+    padding: 7px;
+    width: 300px;
+    justify-content: center;
+}
+
+#submit_Btn{
+    background-color: rgb(235, 235, 235);
+    border: 1px;
+    border-radius: 20px;
+    padding: 10px 20px; 
+}
+
+
+
+
+
+.checkout_div{
+    vertical-align: top;
+    position: absolute;
+    width: 700px;
+    height: 100vh;
+    display: inline-block;
+}
+
+.subCheckout{
+    position: relative;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.grand_div{
+    position: relative;
+    top: 30px;
+}
+.Total_price{
+    display: flex;
+    align-content: flex-start;
+}
+
+#Paid_btn{
+    background-color: rgb(235, 235, 235);
+    border: 1px;
+    border-radius: 20px;
+    padding: 10px 20px; 
+}
+
+/* Add some styling to the table */
+#receiptTable {
+    width: 100%; /* Set the width to 100% to span the entire container */
+    border-collapse: collapse; /* Collapse borders between cells */
+  
+    /* Add some additional styling for better visualization */
+    margin-top: 20px;
+  }
+  
+  
+  
+  /* Style the table header cells (th) */
+  #receiptTable th {
+    padding: 12px; /* Add padding to the header cells */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Style the table body cells (td) */
+  #receiptTable td {
+    padding: 8px; /* Add padding to each cell */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Style alternate rows with a different background color for better readability */
+  
+  /* Add some margin to the bottom of the table */
+  #receiptTable tbody {
+    margin-bottom: 20px;
+  }
+  
 

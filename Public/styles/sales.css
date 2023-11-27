@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(rgba(196, 196, 196, 0.8),rgba(196, 196, 196, 0.8)), url(../images/ecommerce-2140604_1920.jpg);
+}
+
+#generateSales_btn{
+    margin-top: 10px;
+    background-color: rgb(235, 235, 235);
+    border: 1px;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+/* Add some styling to the saleTable */
+#saleTable {
+    width: 70%; /* Set the width to 100% to span the entire container */
+    border-collapse: collapse; /* Collapse borders between cells */
+    margin-top: 20px;
+  }
+  
+  /* Style the table header (thead) */
+  #saleTable thead {
+    border-bottom: 2px solid #ddd; /* Add a faint border at the bottom of the header */
+  }
+  
+  /* Style the table header cells (th) */
+  #saleTable th {
+    border: 1px solid #ddd; /* Add a faint border to each header cell */
+    padding: 12px; /* Add padding to the header cells */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Style the table body cells (td) */
+  #saleTable td {
+    border: 1px solid #ddd; /* Add a faint border to each cell */
+    padding: 8px; /* Add padding to each cell */
+    text-align: left; /* Align text to the left */
+  }
+  
+  
+  /* Remove background color from all cells */
+  #saleTable td,
+  #saleTable th {
+    background-color: transparent;
+  }
+  
+  /* Add some margin to the bottom of the table */
+  #saleTable tbody {
+    margin-bottom: 20px;
+  }
+  

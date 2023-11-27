@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(rgba(196, 196, 196, 0.8),rgba(196, 196, 196, 0.8)), url(../images/ecommerce-2140604_1920.jpg);
+}
+
+p{
+    margin: 0;
+}
+.adminHeader{
+    background-color: rgb(178, 178, 178);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page_title{
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.add_product_section{
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: rgb(87, 116, 116);
+}
+
+.table_heading{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.all_products{
+    vertical-align: top;
+    position: absolute;
+    top: 40px;
+    left: 650px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productContainer{
+    display: inline-block;
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+
+#fetchDataButton{
+    margin-top: 20px;
+    background-color: rgb(235, 235, 235);
+    border: 1px;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+#fetchSaleDataButton{
+    background-color: rgb(235, 235, 235);
+    border: 1px;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+
+
+.div_title{
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.underline{
+    margin: 0;
+    width: 30%;
+    height: 2px;
+    background-color: rgb(16, 48, 48);
+    border-radius: 40px;
+}
+
+#product_form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#product_id,
+#product_name,
+#product_price,
+#product_quantity
+{
+    display: flex;
+    background-color: rgb(235, 235, 235);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px;
+    border-radius: 10px;
+    padding: 7px;
+    width: 300px;
+    justify-content: center;
+}
+
+.submit_btn{
+    background-color: rgb(235, 235, 235);
+    margin-bottom: 15px;
+    padding: 5px 15px;
+    border: 1px;
+    border-radius: 10px;
+}
+
+#logout_btn{
+    position: relative;
+    background-color: rgb(235, 235, 235);
+    border: 1px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+/* Add styling to the productTable */
+#productTable {
+    width: 100%; /* Set the width to 100% to span the entire container */
+    border-collapse: collapse; /* Collapse borders between cells */
+    margin-top: 20px;
+  }
+  
+  #productTable thead {
+    border-bottom: 2px solid #ddd; /* Add a faint border at the bottom of the header */
+  }
+  
+  #productTable th {
+    border: 1px solid #ddd; 
+    padding: 12px; 
+    text-align: left; 
+  }
+  
+  #productTable td {
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: left; 
+  }
+  
+  #productTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  #productTable td,
+  #productTable th {
+    background-color: transparent;
+  }
+  
+  #productTable tbody {
+    margin-bottom: 20px;
+  }
+  

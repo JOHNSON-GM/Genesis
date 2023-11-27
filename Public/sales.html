@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/sales.css">
+</head>
+<body>
+    <div class="Sales" >
+        <h2 class="table_heading" >Sales Report</h2>
+        <button id="generateSales_btn" > Generate Report</button>
+        <div class="underline_table" ></div>
+        <table id="saleTable">
+            <thead>
+              <tr>
+                <th>Customer</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+
+    </div>
+
+    <script>
+        document.getElementById('generateSales_btn').addEventListener('click', fetchAndDisplaySales);
+
+
+        function fetchAndDisplaySales() {
+            fetch('/fetchSales')
+                .then(response => {
+                    if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+                })
+                .then(sales => {
+                const tableBody = document.querySelector('#saleTable tbody');
+                
+                // Clear existing table rows before appending new ones
+                tableBody.innerHTML = ''; 
+
+            // Iterate over the list of products and append rows to the table
+                sales.forEach(sale => {
+                    const row = tableBody.insertRow();
+                    const customerCell = row.insertCell(0);
+                    const iDCell = row.insertCell(1);
+                    const nameCell = row.insertCell(2);
+                    const priceCell = row.insertCell(3);
+                    const quantityCell = row.insertCell(4);
+                    const dateCell = row.insertCell(5);
+
+                    customerCell.textContent = sale.Customer;
+                    iDCell.textContent = sale.productID;
+                    nameCell.textContent = sale.Name;
+                    priceCell.textContent = sale.Price;
+                    quantityCell.textContent = sale.Quantity;
+                    dateCell.textContent = sale.Date_of_sale
+                });
+        })
+        .catch(error => console.error('Error fetching or displaying products:', error));
+    }
+
+
+
+    </script>
+</body>
+</html>
