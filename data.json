@@ -24,6 +24,11 @@
       "name": "Noah Gitau",
       "email": "Noah@gmail.com",
       "password": "noahgitau"
+    },
+    {
+      "name": "John",
+      "email": "Ngure@gmail.com",
+      "password": "Chick"
     }
   ],
   "Admin": [
@@ -57,6 +62,22 @@
       "Price": "2000",
       "Quantity": "1",
       "Date_of_sale": "2023-11-23"
+    },
+    {
+      "Customer": "Johnson Gichuki",
+      "productID": "3",
+      "Name": "ww",
+      "Price": "300",
+      "Quantity": "20",
+      "Date_of_sale": "2023-12-13"
+    },
+    {
+      "Customer": "Johnson Macharia Gichuki",
+      "productID": "23",
+      "Name": "sed",
+      "Price": "300",
+      "Quantity": "20",
+      "Date_of_sale": "2023-12-26"
     }
   ]
 }
